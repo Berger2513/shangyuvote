@@ -27,6 +27,16 @@ class VoteController extends Controller
      public function index()
     {
         $votes = $this->vote->all();
+        foreach ($votes as $key => $value) {
+            $end_time = strtotime($value->end_time);
+            $now_time = strtotime(date('m/d/Y'));
+
+            if($end_time < $now_time) {
+                //结束
+                $value = $this->vote->update(['status'=>3],$value->id);
+            }
+        }
+        $votes = $this->vote->all();
         return view('admin.vote.index', compact('votes'));
     }
 
@@ -34,6 +44,7 @@ class VoteController extends Controller
     {
         $vote = new Vote();
         $persons = Person::all();
+
         return view('admin.vote.create', compact('persons', 'vote'));
     }
 

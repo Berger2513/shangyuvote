@@ -13,7 +13,7 @@ use App\Models\VotePoler;
 
 class VoteController extends Controller
 {
-     public $vote;
+    public $vote;
 
     public function __construct(VoteRepository $vote)
     {
@@ -34,6 +34,7 @@ class VoteController extends Controller
 
     public function store(Request $request)
     {
+
         $poler_info = VotePoler::where('poler_id', 'wangdong')
         ->where('vote_date', date('Y-m-d'))
         ->where('vote_id', $request->vote_id)

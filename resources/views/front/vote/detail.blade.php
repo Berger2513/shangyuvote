@@ -64,7 +64,7 @@
                 @foreach($vote->person_list as $key=>$val)
                 <label class="weui-cell weui-check__label" for="Vote_{{$key+1}}">
                     <div class="weui-cell__hd">
-                        <input type="checkbox" class="weui-check" name="user_id[]" id="Vote_{{$key+1}}">
+                        <input type="checkbox" class="weui-check" name="user_id[]" id="Vote_{{$key+1}}" value="{{$val->id}}">
                         <i class="weui-icon-checked"></i>
                     </div>
                     <div class="weui-cell__bd">
@@ -76,7 +76,12 @@
         </div>
             </section>
 
-            <button  type='submit' class="weui-btn weui-btn_plain-primary"> 投票 </button>
+
+            @if($vote->status == 3)
+                <button  type='button' class="weui-btn weui-btn_plain-warn"> 投票已结束 </button>
+            @else
+                <button  type='submit' class="weui-btn weui-btn_plain-primary"> 投票 </button>
+            @endif
             </form>
         </article>
     </div>
