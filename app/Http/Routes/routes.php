@@ -40,3 +40,13 @@ Route::group(['middleware' => ['web']], function () {
         require app_path('Http/Routes/admin.php');
     });
 });
+
+Route::get('/wechat/index', [
+    'as' => 'index',
+    'uses' => 'WeChatController@index'
+]);
+
+Route::get('/wechat/solve', [
+    'as' => 'solve',
+    'uses' => 'WeChatController@solve'
+]);
