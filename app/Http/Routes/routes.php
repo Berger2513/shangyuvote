@@ -15,7 +15,7 @@ Route::get('/', ['middleware' => 'web', function () {
     return view('index');
 }]);
 
-Route::any('/wechat', 'WeChatController@serve');
+
 Route::get('/vote', 'VoteController@index');
 Route::get('/vote/detail/{id}', 'VoteController@detail');
 Route::post('/vote/store', 'VoteController@store');
@@ -40,8 +40,8 @@ Route::group(['middleware' => ['web']], function () {
         require app_path('Http/Routes/admin.php');
     });
 });
-
-Route::get('/wechat/index', [
+// Route::any('/wechat', 'WeChatController@serve');
+Route::get('/wechat', [
     'as' => 'index',
     'uses' => 'WeChatController@index'
 ]);

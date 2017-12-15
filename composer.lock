@@ -1218,22 +1218,22 @@
         },
         {
             "name": "overtrue/socialite",
-            "version": "2.0",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/overtrue/socialite.git",
-                "reference": "69feed573ac7a93c71d8e733c4d3ed3bfb2b04d1"
+                "reference": "fda55f0acef43a144799b1957a8f93d9f5deffce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/overtrue/socialite/69feed573ac7a93c71d8e733c4d3ed3bfb2b04d1.zip",
-                "reference": "69feed573ac7a93c71d8e733c4d3ed3bfb2b04d1",
+                "url": "https://files.phpcomposer.com/files/overtrue/socialite/fda55f0acef43a144799b1957a8f93d9f5deffce.zip",
+                "reference": "fda55f0acef43a144799b1957a8f93d9f5deffce",
                 "shasum": ""
             },
             "require": {
                 "guzzlehttp/guzzle": "~5.0|~6.0",
-                "php": ">=7.0",
-                "symfony/http-foundation": "^3.0|^4.0"
+                "php": ">=5.4.0",
+                "symfony/http-foundation": "~2.6|~2.7|~2.8|~3.0"
             },
             "require-dev": {
                 "mockery/mockery": "~0.9",
@@ -1264,20 +1264,20 @@
                 "wechat",
                 "weibo"
             ],
-            "time": "2017-12-11T18:06:28+00:00"
+            "time": "2017-08-04T06:28:22+00:00"
         },
         {
             "name": "overtrue/wechat",
-            "version": "3.3.21",
+            "version": "3.3.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/overtrue/wechat.git",
-                "reference": "ba7a9e26f158caa37182a88a853513ae406837d5"
+                "reference": "642f6b87d19b30d708e1fa759fa071a7b2696400"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/overtrue/wechat/ba7a9e26f158caa37182a88a853513ae406837d5.zip",
-                "reference": "ba7a9e26f158caa37182a88a853513ae406837d5",
+                "url": "https://files.phpcomposer.com/files/overtrue/wechat/642f6b87d19b30d708e1fa759fa071a7b2696400.zip",
+                "reference": "642f6b87d19b30d708e1fa759fa071a7b2696400",
                 "shasum": ""
             },
             "require": {
@@ -1285,7 +1285,7 @@
                 "ext-openssl": "*",
                 "guzzlehttp/guzzle": "~6.2",
                 "monolog/monolog": "^1.17",
-                "overtrue/socialite": ">=1.0.25",
+                "overtrue/socialite": "^1.0.25",
                 "php": ">=5.5.0",
                 "pimple/pimple": "~3.0",
                 "symfony/http-foundation": "~2.6|~2.7|~2.8|~3.0",
@@ -1322,7 +1322,7 @@
                 "weixin",
                 "weixin-sdk"
             ],
-            "time": "2017-12-10T13:47:31+00:00"
+            "time": "2017-12-14T08:09:53+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -1424,16 +1424,16 @@
         },
         {
             "name": "prettus/l5-repository",
-            "version": "2.6.28",
+            "version": "2.6.29",
             "source": {
                 "type": "git",
                 "url": "https://github.com/andersao/l5-repository.git",
-                "reference": "3ac622779572030dac57178e50bf9ee00884e8f6"
+                "reference": "201039ad9bc03f722a8d904535bb375812ae267e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/andersao/l5-repository/3ac622779572030dac57178e50bf9ee00884e8f6.zip",
-                "reference": "3ac622779572030dac57178e50bf9ee00884e8f6",
+                "url": "https://files.phpcomposer.com/files/andersao/l5-repository/201039ad9bc03f722a8d904535bb375812ae267e.zip",
+                "reference": "201039ad9bc03f722a8d904535bb375812ae267e",
                 "shasum": ""
             },
             "require": {
@@ -1485,7 +1485,7 @@
                 "model",
                 "repository"
             ],
-            "time": "2017-11-13T15:11:36+00:00"
+            "time": "2017-12-14T15:57:36+00:00"
         },
         {
             "name": "prettus/laravel-validation",
@@ -1918,16 +1918,16 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v3.4.1",
+            "version": "v3.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
-                "reference": "ca20b8f9ef149f40ff656d52965f240d85f7a8e4"
+                "reference": "b869cbf8a15ca6261689de2c28a7d7f2d0706835"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/symfony/event-dispatcher/ca20b8f9ef149f40ff656d52965f240d85f7a8e4.zip",
-                "reference": "ca20b8f9ef149f40ff656d52965f240d85f7a8e4",
+                "url": "https://files.phpcomposer.com/files/symfony/event-dispatcher/b869cbf8a15ca6261689de2c28a7d7f2d0706835.zip",
+                "reference": "b869cbf8a15ca6261689de2c28a7d7f2d0706835",
                 "shasum": ""
             },
             "require": {
@@ -1977,7 +1977,7 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-            "time": "2017-11-09T14:14:31+00:00"
+            "time": "2017-12-14T19:40:10+00:00"
         },
         {
             "name": "symfony/finder",

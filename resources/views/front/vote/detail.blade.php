@@ -1,12 +1,37 @@
 @extends('front.layout')
+<style>
+    .detail-card {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background: #6E52ED;
+        color: white;
+    }
 
+    .detail-card-title {
+        margin-bottom: 0;
+        font-size: 16px;
+        padding: 0 5px;
+        clear: both;
+    }
+
+    .detail-card-title-left {
+        float: left;
+        margin: 15px 0;
+    }
+
+    .detail-card-title-right {
+        float: right;
+        margin: 15px 0;
+    }
+
+</style>
 @section('content')
 <div class="page panel js_show">
 
 <!-- <div class="page article js_show"> -->
     <div class="page__bd">
         <article class="weui-article">
-            <h1>{{$vote->title}}</h1>
+            <h1 style="text-align: center;font-size: 28px;">{{$vote->title}}</h1>
             <section>
                 <section>
                     <p>
@@ -17,17 +42,17 @@
                         <img src="./images/pic_article.png" alt="">
                     </p> -->
                 </section>
-                <h2>候选人列表</h2>
+                <h2 style="font-size: 22px;">候选人列表</h2>
                 @foreach($vote->person_list as $key=>$val)
-                     <section>
-                    <h3><b>编号:{{$key+1}}</b>  {{$val->name}} --当前票数： {{$val->Sorce or 0}}</h3>
-                    <p>
-                        <img src="{{ url('/uploads/'.$val->avatar)}}" alt="">
-                    </p>
-                    <p>
+                    <section class="detail-card">
+                        <div class="detail-card-title"><span class="detail-card-title-left">编号:{{$key+1}}</span>  <span class="detail-card-title-right">{{$val->name}} --当前票数： {{$val->Sorce or 0}}</span></div>
+                        <p>
+                            <img src="{{ url('/uploads/'.$val->avatar)}}" alt="">
+                        </p>
+                        <p style="padding:0 5px;">
                             {{strip_tags($val->content)}}
-                    </p>
-                </section>
+                        </p>
+                    </section>
                 @endforeach
             </section>
             <form method="post" action="{{url('vote/store')}}">
