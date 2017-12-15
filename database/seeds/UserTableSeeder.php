@@ -25,10 +25,6 @@ class UserTableSeeder extends Seeder
             'password' => 'editor',
         ]);
 
-        User::create([
-            'name' => 'UserName',
-            'email' => 'username@username.com',
-            'password' => 'username',
-        ]);
+
     }
 }

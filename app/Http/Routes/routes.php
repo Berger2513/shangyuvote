@@ -15,6 +15,11 @@ Route::get('/', ['middleware' => 'web', function () {
     return view('index');
 }]);
 
+Route::any('/wechat', 'WeChatController@serve');
+Route::get('/vote', 'VoteController@index');
+Route::get('/vote/detail/{id}', 'VoteController@detail');
+Route::post('/vote/store', 'VoteController@store');
+Route::get('/vote/message', 'VoteController@message');
 /*
 |--------------------------------------------------------------------------
 | Application Routes

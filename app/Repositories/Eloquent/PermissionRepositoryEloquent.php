@@ -41,6 +41,8 @@ class PermissionRepositoryEloquent extends BaseRepository implements PermissionR
         $search['value'] = $request->input('search.value','');
         $search['regex'] = $request->input('search.regex',false);
 
+
+
         if ($search['value']){
             if ($search['regex'] == 'true'){
                 $this->model = $this->model->where('display_name','like',"%{$search['value']}%")->orWhere('name','like',"%{$search['value']}%");
@@ -49,8 +51,9 @@ class PermissionRepositoryEloquent extends BaseRepository implements PermissionR
             }
         }
 
+
         $count = $this->model->count();
-        $this->model = $this->model->orderBy($order['name'],$order['dir']);
+        // $this->model = $this->model->orderBy($order['name']);
         $this->model = $this->model->offset($start)->limit($length)->get();
 
         if ($this->model) {

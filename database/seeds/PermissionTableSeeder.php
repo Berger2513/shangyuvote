@@ -17,6 +17,8 @@ class PermissionTableSeeder extends Seeder
         $this->adminUser();
         $this->permission();
         $this->role();
+        $this->vote();
+        $this->persion();
     }
 
     /**
@@ -149,5 +151,65 @@ class PermissionTableSeeder extends Seeder
         $roleDelete->display_name = '删除角色';
         $roleDelete->description = '删除角色';
         $roleDelete->save();
+    }
+
+    /**
+     * create role permission
+     */
+    public function vote()
+    {
+        $roleList = New Permission();
+        $roleList->name = 'vote.list';
+        $roleList->display_name = '投票列表';
+        $roleList->description = '投票列表';
+        $roleList->save();
+
+        $roleAdd = New Permission();
+        $roleAdd->name = 'vote.add';
+        $roleAdd->display_name = '添加投票';
+        $roleAdd->description = '添加投票';
+        $roleAdd->save();
+
+        $roleEdit = New Permission();
+        $roleEdit->name = 'vote.edit';
+        $roleEdit->display_name = '修改投票';
+        $roleEdit->description = '修改投票';
+        $roleEdit->save();
+
+        $roleDelete = New Permission();
+        $roleDelete->name = 'vote.delete';
+        $roleDelete->display_name = '删除投票';
+        $roleDelete->description = '删除投票';
+        $roleDelete->save();
+    }
+
+    /**
+     * create role permission
+     */
+    public function persion()
+    {
+        $persion = New Permission();
+        $persion->name = 'persion.list';
+        $persion->display_name = '候选人列表';
+        $persion->description = '候选人列表';
+        $persion->save();
+
+        $persionAdd = New Permission();
+        $persionAdd->name = 'persion.add';
+        $persionAdd->display_name = '添加候选人';
+        $persionAdd->description = '添加候选人';
+        $persionAdd->save();
+
+        $persionEdit = New Permission();
+        $persionEdit->name = 'persion.edit';
+        $persionEdit->display_name = '修改候选人';
+        $persionEdit->description = '修改候选人';
+        $persionEdit->save();
+
+        $persionDelete = New Permission();
+        $persionDelete->name = 'persion.delete';
+        $persionDelete->display_name = '删除候选人';
+        $persionDelete->description = '删除候选人';
+        $persionDelete->save();
     }
 }

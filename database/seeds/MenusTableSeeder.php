@@ -47,5 +47,21 @@ class MenusTableSeeder extends Seeder
         $roleManage->slug = 'role.list';
         $roleManage->parent_id = $systemManage->id;
         $roleManage->save();
+
+        $voteManage = new Menu();
+        $voteManage->name = '投票管理';
+        $voteManage->url = 'admin/vote';
+        $voteManage->slug = 'vote.list';
+        $voteManage->icon = 'fa fa-cogs';
+        $voteManage->parent_id = 0;
+        $voteManage->save();
+
+        $vote = new Menu();
+        $vote->name = '投票列表';
+        $vote->url = 'admin/vote';
+        $vote->slug = 'vote.list';
+        $vote->parent_id = $voteManage->id;
+        $vote->save();
+
     }
 }

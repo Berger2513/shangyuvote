@@ -156,7 +156,6 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         //Barryvdh\Debugbar\ServiceProvider::class,
-
         /**
          * 仓库模式包
          */
@@ -226,7 +225,6 @@ return [
          * RBAC
          */
         'Entrust'   => Zizaco\Entrust\EntrustFacade::class,
-
         /**
          * laravel-debugbar
          */

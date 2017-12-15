@@ -51,6 +51,19 @@
                                 <th>操作</th>
                             </tr>
                             </thead>
+                            <tbody>
+                            @foreach($roles as $role)
+                            <tr>
+                                <td>{{$role->id}}</td>
+                                <td>{{$role->display_name}}</td>
+                                <td>{{$role->name}}</td>
+                                <td>{{$role->display_name}}</td>
+                                <td>{{$role->created_at}}</td>
+                                <td>{{$role->updated_at}}</td>
+                                <td>{{$role->id}}</td>
+                            </tr>
+                            @endforeach
+                            </tbody>
                         </table>
                     </div>
                 </div>

@@ -23,28 +23,7 @@ $(document).ready(function () {
             "sSortAscending": ": 以升序排列此列",
             "sSortDescending": ": 以降序排列此列"
         }};
-    $('#datatable').DataTable({
-        "processing": true,
-        'language':lang,
-        "serverSide": true,
-        'searchDelay':300,//搜索延时
-        'search':{
-            regex : true//是否开启模糊搜索
-        },
-        "ajax": {
-            'url' : "/admin/permission/ajaxIndex"
-        },
-        'aLengthMenu':[50,100],
-        "columns": [
-            {"data": "id","name" : "id"},
-            {"data": "name","name" : "name","orderable" : false},
-            {"data": "display_name","name": "display_name","orderable" : false},
-            {"data": "description","name": "description","orderable" : false},
-            {"data": "created_at","name": "created_at","orderable" : true},
-            {"data": "updated_at","name": "updated_at","orderable" : true},
-            {"data": "button","name": "button",'type':'html',"orderable" : false}
-        ]
-    });
+    $('#datatable').DataTable();
 
 
 });

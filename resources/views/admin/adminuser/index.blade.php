@@ -51,6 +51,18 @@
                                 <th>操作</th>
                             </tr>
                             </thead>
+
+                            @foreach($users as $val)
+                            <tr>
+                                <td>{{$val->id}}</td>
+                                <td>{{$val->display_name}}</td>
+                                <td>{{$val->name}}</td>
+                                <td>{{$val->display_name}}</td>
+                                <td>{{$val->created_at}}</td>
+                                <td>{{$val->updated_at}}</td>
+                                <td>{{$val->id}}</td>
+                            </tr>
+                            @endforeach
                         </table>
                     </div>
                 </div>

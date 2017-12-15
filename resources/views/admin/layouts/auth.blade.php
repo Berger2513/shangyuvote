@@ -5,7 +5,7 @@
 <!--<![endif]-->
 <head>
     <meta charset="utf-8" />
-    <title>Color Admin | Login Page</title>
+    <title>上虞公安投票管理系统</title>
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
     <meta content="" name="description" />
     <meta content="" name="author" />

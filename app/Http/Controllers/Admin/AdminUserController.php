@@ -27,7 +27,8 @@ class AdminUserController extends Controller
     public function index()
     {
         $role = auth('admin')->user()->roles->toArray()[0]['display_name'];
-        return view('admin.adminuser.index');
+        $users = $this->adminUser->all();
+        return view('admin.adminuser.index', compact('users'));
     }
 
     /**

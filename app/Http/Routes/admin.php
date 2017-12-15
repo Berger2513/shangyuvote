@@ -8,6 +8,18 @@ Route::group(['middleware' => ['auth:admin']], function ($router) {
     //目录
     $router->resource('menus', 'MenuController');
 
+    $router->resource('vote', 'VoteController');
+    Route::post('vote/person', [
+        'as' => 'admin.vote.person',
+        'uses' => 'VoteController@personAction'
+    ]);
+    $router->resource('person', 'personController');
+
+
+    Route::post('upload', [
+        'as' => 'upload',
+        'uses' => 'persionController@upload'
+    ]);
     //后台用户
     $router->get('adminuser/ajaxIndex',['uses'=>'AdminUserController@ajaxIndex','as'=>'admin.adminuser.ajaxIndex']);
     $router->resource('adminuser', 'AdminUserController');

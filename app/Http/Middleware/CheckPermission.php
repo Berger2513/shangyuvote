@@ -13,12 +13,16 @@ class CheckPermission{
             case "admin.{$m}.index":
             case "admin.{$m}.ajaxIndex": $permission = "{$m}.list";     break;
             case "admin.{$m}.create":
+            case "admin.{$m}.show":
+            case "admin.{$m}.persion":
             case "admin.{$m}.store":     $permission = "{$m}.add";      break;
             case "admin.{$m}.edit":
+            case "admin.{$m}.show":
             case "admin.{$m}.update":    $permission = "{$m}.edit";     break;
             case "admin.{$m}.destroy":   $permission = "{$m}.delete";   break;
             default : break;
         }
+        // dd($permission);
         if (!$permission){
             abort(500,'系统没有权限，请修改权限验证中间件\\App\\Http\\Middleware\\CheckPermission！');
         }
